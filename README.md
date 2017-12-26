@@ -68,6 +68,8 @@ export LC_ALL=C.UTF-8
 python3 export.py -d "tgsearch.db" -e "../tg/bin/telegram-cli"
 ```
 
+[此处应有截图]
+
 **注意事项:**
 
 - 每个 peer_chat **每次**只能获取 3000 条. 3000 条到顶后, 他会报个小错, 莫慌, 没事.
@@ -76,7 +78,6 @@ python3 export.py -d "tgsearch.db" -e "../tg/bin/telegram-cli"
     - 同理请勿尝试 wsl 或者 msys2 上编译. 活着不好么
 - 记录条数过多, 可能延长备份时间. 主要耗时在建索引. 感觉等不起的, 理论上可以从py脚本里去掉 `建索引` 那步. 
 我没试过, 可能有不良后果.
-
 
 ### 部署
 
@@ -100,7 +101,7 @@ chmod +x ./tg-search
 接着
 打开网页, 
 比如 `http://123.123.123.123:8082`
-或者 `http://example.com:8082`
+或者 `http://example.com:8082`  
 见证奇迹的时刻到了.
 
 > 不急  
@@ -139,7 +140,7 @@ go build --tags "libsqlite3 linux" -o tgsearch
 人的需求有时不那么容易填满,  
 因为我们还想查找某条消息的来源, 对象, 发言时间等等.  
 
-那么请您把搜到的消息, 复制到 telegram 搜索框里, 
+那么请您把搜到的那条消息, 囫囵复制到 telegram 客户端搜索框里, 
 
 ![粘贴到tg搜索框](https://user-images.githubusercontent.com/8279655/34347658-0e724714-e9ba-11e7-929a-1fce478b1aec.png)
 
@@ -156,10 +157,13 @@ go build --tags "libsqlite3 linux" -o tgsearch
 - 前端装修
 - 静态 (网页模版等) 打包到二进制
 - 进门加密码
-- 加钱上 elasticsearch, 妙妙妙!
+- 加钱上 `elasticsearch`, 妙妙妙!
 - 查询加速: 尝试每找到一条消息, 立马在网页上加载一条
 - 整合 travis 云编译
 - 求路过的高手指点, 求前端网页装修方案
+
+> 以上是伪.后续计划    
+真.后续计划: 坐等有缘人接手
 
 ---
 
@@ -178,7 +182,6 @@ go build --tags "libsqlite3 linux" -o tgsearch
 基于 Webogram, 
 以 Chrome extension 为运作形式,
 产出 ???
- 
 (未测试)
 
 - [gumblex/tg-export](https://github.com/gumblex/tg-export)
