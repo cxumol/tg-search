@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>tg中文搜索</title>
+</head>
+
+<body>
+    <form action="/tgs" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="🌚">
+        </form>
+    {{if ne .Keyword ""}}
+    <p>按图 ({{.Keyword}}) 索骥:</p>
+    <ul>
+        {{range .Results}}
+            <li>{{.}}</li>
+        {{end}}
+    </ul>
+    {{end}}
+</body>
+
+<footer><center>
+    <p>
+    version: 又不是不能用
+    </p>
+    <p><a href="#" >
+        告诉我怎么搞出搜索来
+    </a></p>
+</center></footer>
+
+</html>
