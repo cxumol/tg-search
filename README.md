@@ -22,7 +22,7 @@
 - 采用数据库暴搜, 无分词/同义词. 技术含量低.
 - 原生态网页界面.
 - 数据源需手动备份, 和真实数据相比有延时.
-- 取得全部匹配消息后才加载结果.
+- 取得所有匹配消息后才加载结果.
 
 ## 操作
 
@@ -156,15 +156,16 @@ go build --tags "libsqlite3 linux" -o tgsearch
 - 前端装修
 - 静态 (网页模版等) 打包到二进制
 - 进门加密码
+- 加钱上 elasticsearch, 妙妙妙!
 - 查询加速: 尝试每找到一条消息, 立马在网页上加载一条
 - 整合 travis 云编译
 - 求路过的高手指点, 求前端网页装修方案
 
 ---
 
-### 备忘
+## 备忘
 
-#### tg-export 与类似项目比较
+### tg-export 与类似项目比较
 
 - [tvdstaaij/telegram-history-dump](https://github.com/tvdstaaij/telegram-history-dump)
 
@@ -188,7 +189,7 @@ go build --tags "libsqlite3 linux" -o tgsearch
 产出 `.db (sqlite)`
 
 
-#### 本项目 与类似项目比较
+### 本项目 与类似项目比较
 
 - [@typcn_soliloquize_bot](https://t.me/typcn_soliloquize_bot) 
 
