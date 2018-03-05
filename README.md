@@ -7,7 +7,7 @@
 
 都说 Telegram 官方永远不重视 CJK 用户.
 难道广大的 CJK 朋友会坐以待毙?     
-哦, 我的上帝, 看在帕罗尔.杜若这么帅的份上, 当然是选择原……  
+哦, 我的上帝, 看在帕维尔.杜若这么帅的份上, 当然是选择原……  
 **不可能!**
 
 ## 条件
@@ -19,7 +19,7 @@
 
 ## 特(que) 色(dian)
 
-- 采用数据库暴搜, 无分词/同义词. 技术含量低.
+- 胶水工程, 数据库暴搜, 无分词/同义词/模糊. 技术含量低.
 - 原生态网页界面.
 - 数据源需手动备份, 和真实数据相比有延时.
 - 取得所有匹配消息后才加载结果.
@@ -85,13 +85,14 @@ python3 export.py -d "tgsearch.db" -e "../tg/bin/telegram-cli"
 部署, 就是啧么自信.
 
 下载解压
-[tgsearch_linux_amd64.zip](https://github.com/cxumol/tg-search/releases/download/alpha/tgsearch_linux_amd64.zip)
+[tgsearch_linux_amd64.zip](https://github.com/cxumol/tg-search/releases/download/0.1a/tgsearch_linux_amd64.zip)
 
 找个文件夹,  
 把软件 `tgsearch` 放进去,  
 把网页模版 `main.tmpl` 放进去,  
+把文件配置 `config.json` 放进去,  
 把数据库文件 `tgsearch.db` 放进去,  
-然后运行,
+然后运行,  
 
 ```bash
 chmod +x ./tg-search
@@ -105,14 +106,15 @@ chmod +x ./tg-search
 见证奇迹的时刻到了.
 
 > 不急  
-因为我把数据库文件名写死了🌚.  
-端口也写死了🌚.  
+<s> 因为我把数据库文件名写死了🌚. </s>  
+<s> 端口也写死了🌚. </s>  
+> (已经可以自定义数据库文件名和端口号了, 在 "config.json" 里面改.)  
 且只编译了 linux_amd64 下的二进制包🌚.  
 如不适请自编
 
 #### 编译
 
-> 虽不必要, 但万一谁想<s>不开</s>编译呢
+> 虽无必要, 但万一谁想<s>不开</s>编译呢
 
 ```bash
 # 1. 装go, 抄自 https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/01.1.md
@@ -156,14 +158,14 @@ go build --tags "libsqlite3 linux" -o tgsearch
 - 灵活配置端口, 数据库文件名
 - 前端装修
 - 静态 (网页模版等) 打包到二进制
-- 进门加密码
+- 访问密码
 - 加钱上 `elasticsearch`, 妙妙妙!
-- 查询加速: 尝试每找到一条消息, 立马在网页上加载一条
+- 查询加速: 尝试每找到一条消息, 立马在网页上加载一条 (channel 通信 + 轮询)
 - 整合 travis 云编译
 - 求路过的高手指点, 求前端网页装修方案
 
-> 以上是伪.后续计划    
-真.后续计划: 坐等有缘人接手
+> 以上是伪.后续计划  
+真.后续计划: **坐等有缘人接手**  
 
 ---
 
