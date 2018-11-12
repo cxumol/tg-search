@@ -14,6 +14,9 @@ tg 官方终于愿意稍微关注一下中文用户了, 总的来说是件好事
 
 ## 使用
 
+以 <https://t.me/Financial_Express> 为例｡   
+这是一个不停推送大量新闻的频道｡ 推送的速度有时大大超过普通人的阅读速度｡ 
+
 ![image](https://user-images.githubusercontent.com/8279655/48327046-781f5b00-e5f1-11e8-80c0-e4c157a512f1.png)
 ---
 ![image](https://user-images.githubusercontent.com/8279655/48326474-6daf9200-e5ee-11e8-8480-56a05897c564.png)
