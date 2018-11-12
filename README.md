@@ -2,7 +2,7 @@
 
 ## 背景
 
-8012 年 11 月, [tg官方翻译平台](https://translations.telegram.org/)新增了[简体中文](https://t.me/zh_CN/476) / 繁體中文｡ 
+[8012 年 11 月](https://t.me/zh_CN/476), [tg官方翻译平台](https://translations.telegram.org/)新增了[简体中文](https://translations.telegram.org/zh-hans/) / [繁體中文](https://translations.telegram.org/zh-hant/)｡ 
 
 tg 官方终于愿意稍微关注一下中文用户了, 总的来说是件好事｡ 于是乎, 感觉官方支持中文搜索也[指](https://i.jpg.dog/img/9550032bc2aa530fe04bdffafd4c47eb.jpg)[日](https://a.photo/images/2018/11/12/20181013225313_60687.jpg)[可](https://i.jpg.dog/img/8a94e5be988359f6a61e357345b85ee3.jpg)待🏳️｡ 
 
