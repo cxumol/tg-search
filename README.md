@@ -10,7 +10,7 @@ tg 官方终于愿意稍微关注一下中文用户了, 总的来说是件好事
 
 官方提供数据导出工具之前（GDPR 问世前）, 在下曾经做过一个 telegram 中文搜索解决方案,  [叫做 tg-search](https://github.com/cxumol/tg-search/blob/master/README.md),  它可以搜索某账号所能接触到的全部数据｡  而本解决方案的检索范围（目前）较小, 一次搜索仅限于从一个 chat 中导出的数据, 故名 [tg-search-lite](https://github.com/cxumol/tg-search/blob/lite/README.md)｡ 
 
-相比前作, 本解决方案充分利用官方数据导出格式（桌面客户端导出）, 而且使用上更加平易近人, 通俗易懂, 方便于广大群众使用｡ 
+相比前作, 本解决方案充分利用官方数据导出格式（桌面客户端导出）, 而且使用上更加平易近人, 通俗易懂, 方便广大群众使用｡ 
 
 ## 使用
 
