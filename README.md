@@ -1,4 +1,4 @@
-# tg-search-lite telegram 中文搜索解决方案
+# telegram 中文搜索解决方案 tg-search-lite 
 
 查看旧版请点[这里](https://github.com/cxumol/tg-search/tree/master)
 
