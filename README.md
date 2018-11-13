@@ -1,5 +1,7 @@
 # tg-search-lite telegram 中文搜索解决方案
 
+查看旧版请点[这里](https://github.com/cxumol/tg-search/tree/master)
+
 ## 背景
 
 [8012 年 11 月](https://t.me/zh_CN/476), [tg官方翻译平台](https://translations.telegram.org/)新增了[简体中文](https://translations.telegram.org/zh-hans/) / [繁體中文](https://translations.telegram.org/zh-hant/)｡ 
@@ -44,6 +46,8 @@ Q: 既然导出了 html,  用浏览器的 CTRL+F 不就好了嘛
 
 A: 如果聊天记录在 1000 条以下, 建议 CTRL+F    
 但根据 tg 桌面端导出格式, 一页 (一个 html 文件) 超过 1000 条消息后, 超出部分会分到下一页, 比如第二页放在了 messages2.html 里面｡ 某些大群导出几百页都不奇怪｡  这下 CTRL+F 就不方便了｡
+
+---
 
 因为加载了两个在线资源,  所以需要联网, 
 假如想离线使用,  可以找动手能力强的同学帮忙把那两个在线资源下载下来, 改改路径,  应该就能离线使用了｡ 
