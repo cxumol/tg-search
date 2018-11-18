@@ -2,6 +2,8 @@
 
 查看旧版请点[这里](https://github.com/cxumol/tg-search/tree/master)
 
+旧版更难使用, 但功能更强｡ 
+
 ## 背景
 
 [8012 年 11 月](https://t.me/zh_CN/476), [tg官方翻译平台](https://translations.telegram.org/)新增了[简体中文](https://translations.telegram.org/zh-hans/) / [繁體中文](https://translations.telegram.org/zh-hant/)｡ 
@@ -23,11 +25,13 @@ tg 官方终于愿意稍微关注一下中文用户了, 总的来说是件好事
 ---
 ![image](https://user-images.githubusercontent.com/8279655/48326474-6daf9200-e5ee-11e8-8480-56a05897c564.png)
 ---
-对于有的浏览器,  直接打开 “Home.html” 可以正常运行｡ 比如手头的 Firefox 64.08b (Win-64bit)
+对于有的浏览器,  **直接打开** “Home.html” 可以正常运行｡ 比如手头的 Firefox 64.08b (Win-64bit)
 
-但是有的浏览器,  CORS 真的很严格,  为了 AJAX,  只能在**本机开服**｡ 比如手头的 Chromium 67.0.3396.99 (32-bit) windows
+但是有的浏览器,  CORS 真的很严格,  为了 AJAX,  只能在**本机开服**, 或者, 临时关闭浏览器的 CORS｡ 比如手头的 Chromium 67.0.3396.99 (32-bit) windows
 > 本机开服很简单, 下个 [caddy](https://caddyserver.com/), 在文件夹 `ChatExport_日__月_年` 中直接开服,   再进入 <http://localhost:2015/Home.html> 即可｡   
 > 又比如,  如果你装了 python,  在文件夹 `ChatExport_日__月_年` 中打开 `python -m http.server`, 就能进入 <http://localhost:8080/Home.html> ｡ 
+
+
 
 打开网页
 
@@ -65,12 +69,30 @@ A: 如果聊天记录在 1000 条以下, 建议 CTRL+F
 
 因为按照官方方式导出来是 html, 所以 lite 版干脆全部用前端的方式做了｡
 
+JS 库和框架又多又乱, 让人生厌, 而 (时尚) 浏览器的原生 API 都这么强了｡ 出于对 npm 和 `package.json` 的厌恶, 本来打算一个库都不用, 结果, jquery 真香｡
+
+大概思路和一些具体实现参考了 [docsify](https://github.com/docsifyjs/docsify) 和 [hexo-theme-icarus](https://github.com/ppoffice/hexo-theme-icarus/) 中内置的搜索插件｡ 
+
+加载数据, 生成索引这一步是自己想的: 用 ajax 把原始资料加载到一棵临时的 DOM 里, 再解析这 DOM, 录入生成搜索所需的结构化数据（索引）｡ 
+
 > 稍后补充
 
 ## 缺点 / 后续计划
 
+性能: 
 貌似特别吃性能｡ **所以建议不要搜索聊天记录太长的 chat, 量性能而行** 
 
-考虑过将 索引缓存 存储到 LocalStorage 里面｡ 但是那个上限大概才 5M, 不够用｡ 
+
+
+缓存:  
+考虑过将 索引缓存 存储到 LocalStorage 里面｡ 但是那个上限大概才 5M, 不够用｡  
+针对 LocalStorage 太小的问题, MDN 推荐了 localforage, 以后再细看｡  
+如果容量还不够用, 考虑做个执行档, 不仅在本地目录生成索引文件 (一般就 json 了), 同时后台运行作为静态 web 服务器｡ 
+如果重心再往后点, 岂不是和旧版 tg-search 一样了｡ 
+
+排序:  
+比如搜索输入了两个词, 有一条消息中包含 1 个关键词 1 次, 另一条消息中包含 2 个关键词而且有一个关键词重复了 3 次｡   
+后者显示得更靠上显然更合理｡ 
+
 
 > 稍后补充
