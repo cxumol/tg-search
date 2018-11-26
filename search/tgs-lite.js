@@ -150,7 +150,7 @@ function previewLoader ($item) {
             ).add(chosenOne.addClass("bold selected")
             ).add(chosenOne.next()
             ).add(chosenOne.next().next()
-            ).add(`<a class="pagination block_link" href="`+$item.attr('data-url')+`"> <i class="fas fa-hand-point-right"></i> 回原文定位 </a>`
+            ).add(`<a class="pagination block_link" href="`+$item.attr('data-url')+`"> <i class="fas fa-hand-point-right" target="_blank"></i> 回原文定位 </a>`
             );
 
             $(".loadmsg").empty(); // clear old previews

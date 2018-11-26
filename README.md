@@ -27,9 +27,12 @@ tg 官方终于愿意稍微关注一下中文用户了, 总的来说是件好事
 ---
 对于有的浏览器,  **直接打开** “Home.html” 可以正常运行｡ 比如手头的 Firefox 64.08b (Win-64bit)
 
-但是有的浏览器,  CORS 真的很严格,  为了 AJAX,  只能在**本机开服**, 或者, 临时关闭浏览器的 CORS｡ 比如手头的 Chromium 67.0.3396.99 (32-bit) windows
-> 本机开服很简单, 下个 [caddy](https://caddyserver.com/), 在文件夹 `ChatExport_日__月_年` 中直接开服,   再进入 <http://localhost:2015/Home.html> 即可｡   
-> 又比如,  如果你装了 python,  在文件夹 `ChatExport_日__月_年` 中打开 `python -m http.server`, 就能进入 <http://localhost:8080/Home.html> ｡ 
+但是有的浏览器,  CORS 真的很严格,  为了 AJAX,  可以在**本机开服**, 但更推荐, 临时关闭浏览器的 CORS｡ 比如手头的 Chromium 67.0.3396.99 (32-bit) windows
+
+[临时关闭 Chrome CORS 的教程](https://github.com/zhongxia245/blog/issues/28)
+
+> 本机开服很简单, 下个 [caddy](https://caddyserver.com/), 在文件夹 `ChatExport_日_月_年` 中直接开服,   再进入 <http://localhost:2015/Home.html> 即可｡   
+> 又比如,  如果你装了 python,  在文件夹 `ChatExport_日_月_年` 中打开 `python -m http.server`, 就能进入 <http://localhost:8080/Home.html> ｡ 
 
 
 
@@ -89,6 +92,8 @@ JS 库和框架又多又乱, 让人生厌, 而 (时尚) 浏览器的原生 API �
 针对 LocalStorage 太小的问题, MDN 推荐了 localforage, 以后再细看｡  
 如果容量还不够用, 考虑做个执行档, 不仅在本地目录生成索引文件 (一般就 json 了), 同时后台运行作为静态 web 服务器｡ 
 如果重心再往后点, 岂不是和旧版 tg-search 一样了｡ 
+
+觉得可以试试保存一份 .json 在本文件夹
 
 排序:  
 比如搜索输入了两个词, 有一条消息中包含 1 个关键词 1 次, 另一条消息中包含 2 个关键词而且有一个关键词重复了 3 次｡   
