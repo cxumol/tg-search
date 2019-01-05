@@ -142,17 +142,17 @@ function previewLoader(item) {
     let dataUrl = item.getAttribute('data-url').split('#');
     let filename = dataUrl[0];
     let msgShowId = dataUrl[1];
-    loadFile(filename).then(msgList => displayMessage(msgList, dataUrl, msgShowId))
+    loadFile(filename).then(msgList => displayMessage(msgList, filename, msgShowId))
 
 
-    function displayMessage(msgList, dataUrl, messageId) {
+    function displayMessage(msgList, filename, messageId) {
         let index = Array.prototype.findIndex.call(msgList, (x) => x.id == messageId)
         msgList[index].classList.add('bold')
         msgList[index].classList.add('selected')
         showItems = Array.prototype.slice.call(msgList, index - 3 < 0 ? 0 : index - 3, index + 5)
         const documentFragment = document.createDocumentFragment();
         showItems.forEach(c => documentFragment.appendChild(c));
-        let jumpButton = document.createRange().createContextualFragment(`<a class="pagination block_link" href="${dataUrl}"> <i class="fas fa-hand-point-right"></i> 回原文定位 </a>`);
+        let jumpButton = document.createRange().createContextualFragment(`<a class="pagination block_link" href="${filename}#${messageId}"> <i class="fas fa-hand-point-right"></i> 回原文定位 </a>`);
         documentFragment.appendChild(jumpButton)
         document.getElementById('loadmsg').innerHTML = ''
         document.getElementById('loadmsg').appendChild(documentFragment);
