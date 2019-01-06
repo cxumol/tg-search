@@ -2,7 +2,7 @@ maxPages = 1000; // up to messages999.html
 tgsIndex = {};
 
 foundIndex = {};
-pathPrefix = 'messages'
+pathPrefix = 'data/messages'
 THREAD_NUM = 5
 
 function checkStatus(response) {
@@ -25,7 +25,7 @@ async function loadFile(fileName) {
 
 function loadAll() {
     Array(THREAD_NUM).fill().map((_, t) => {
-        let messageIndexArray = Array(maxPages / THREAD_NUM).fill().map((_, i) => i * THREAD_NUM + t + 1);
+        let messageIndexArray = Array(maxPages).fill().map((_, i) => i * THREAD_NUM + t + 1);
         messageIndexArray.reduce(async (previousValue, currentValue) => {
             try {
                 await previousValue
