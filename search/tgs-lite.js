@@ -152,7 +152,7 @@ function previewLoader(item) {
         showItems = Array.prototype.slice.call(msgList, index - 3 < 0 ? 0 : index - 3, index + 5)
         const documentFragment = document.createDocumentFragment();
         showItems.forEach(c => documentFragment.appendChild(c));
-        let jumpButton = document.createRange().createContextualFragment(`<a class="pagination block_link" href="${filename}#${messageId}"> <i class="fas fa-hand-point-right"></i> 回原文定位 </a>`);
+        let jumpButton = document.createRange().createContextualFragment(`<a class="pagination block_link" href="${filename}#${messageId}"> 👉 回原文定位 </a>`);
         documentFragment.appendChild(jumpButton)
         document.getElementById('loadmsg').innerHTML = ''
         document.getElementById('loadmsg').appendChild(documentFragment);
