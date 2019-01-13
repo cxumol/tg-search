@@ -6,32 +6,29 @@
 
     <link href="css/style.css" rel="stylesheet"/>
     <link href="search/tgs.css" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.5.0/web-fonts-with-css/css/fontawesome-all.min.css" crossorigin="anonymous">
 </head>
 <body>
     <div class="page_header">
-        <h1><a href="https://telegram.org"><i class="fab fa-telegram-plane"></i></a>
+        <h1><a href="https://telegram.org">telegram</a>
                <a href="https://github.com/cxumol/tg-search">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-language"></i>
+                聊天记录搜索
                </a>  </h1>
     </div>
     <aside class="sidebar">
 
         <div class="input-wrap">
             <i class="fas fa-search" style="color:grey"></i>
-            <input type="search" id="tg-searchbar" value="" placeholder=", 请">
+            <input type="search" id="tg-searchbar" value="" placeholder="请输入要查询的内容">
         </div>
 
-        <div class="results-list show">
+        <div class="results-list show" id="results-list">
         
         </div>
 
     </aside>
     
     <section class="content">
-        <div class="loadmsg"></div>
+        <div id="loadmsg"></div>
     </section>
     
     <script src="search/tgs-lite.js"></script>
