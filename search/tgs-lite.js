@@ -170,8 +170,9 @@ function initResultPreviewer() {
             selectedItem[0].classList.remove('selected')
         }
 
-
-        for (let e of event.path) {
+        // ref https://stackoverflow.com/a/39245638
+        let path = event.path || (event.composedPath && event.composedPath());
+        for (let e of path) {
             if (e.classList.contains('message')) {
                 e.classList.add('selected');
                 previewLoader(e)
