@@ -64,7 +64,7 @@ tg 官方终于愿意稍微关注一下中文用户了, 总的来说是件好事
 
 ## 说明
 
-Q: 双击点开 "Home.html", 发现新版 Firefox 浏览器上无法加载数据, 提示 `Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at file:///R:/ChatExport_2022-07-06/messages.html. (Reason: CORS request not http).`, 怎么办? 
+Q: 双击点开 "Home.html", 发现新版 Firefox 上无法加载数据, 浏览器控制台提示 `Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at file:///R:/ChatExport_2022-07-06/messages.html. (Reason: CORS request not http).`, 怎么办? 
 
 A: 这是因为 Firefox 68 及以上版本变更了 CORS 规则, 限制读取本机文件｡ 可以去 `about:configs` 改回来, Firefox 68 ~ 94 对应的配置项是 `privacy.file_unique_origin` ([参考来源](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp)); Firefox 95+ 对应的配置项是 `security.fileuri.strict_origin_policy` ([参考来源](https://www.reddit.com/r/firefox/comments/ro5z5y/is_privacyfile_unique_origin_gone/)), 改成和默认值相反就行了｡ 
 
